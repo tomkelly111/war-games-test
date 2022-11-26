@@ -10,9 +10,17 @@ body {
     box-sizing: border-box;
     width: 70%;
     max-width: 500px;
+    max-height: 400PX;
     border: solid #023B71 10px;
     border-radius: 25px;
     margin-left: auto;
     margin-right: auto;
     padding: 5%;
+}
+
+.battle-ground {
+    width: 50%;
+    font-size: 5rem;
+    margin: auto;
+    padding: 20px;
 }
