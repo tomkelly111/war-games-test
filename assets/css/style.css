@@ -1,6 +1,18 @@
 body {
-    background-color: #E3F0FF;
+    background-color: #486AA5;
     font-family: "Roboto Condensed", Sans-serif;
-    color: #023b71;
+    color: #E3F0FF;
     text-align: center;
+}
+
+.game-area {
+    background-color:#414656 ;
+    box-sizing: border-box;
+    width: 70%;
+    max-width: 500px;
+    border: solid #023B71 10px;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
 }
