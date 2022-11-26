@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="assets/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/e8b7e1c327.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
@@ -15,8 +15,26 @@
     </h1>
 
     <div class="game-area">
-
+        <button class="btn"> Rock
+            <i class="fa-solid fa-hand-fist"></i>
+        </button>
+        <button class="btn"> Paper
+            <i class="fa-solid fa-hand"></i>
+        </button>
+        <button class="btn"> Scissors
+            <i class="fa-solid fa-hand-scissors"></i>
+        </button>
+        <button class="btn"> Random
+            <i class="fa-regular fa-circle-question"></i>
+        </button>
     </div>
+    <div class="battle-ground">
+        <span id="user-choice">?</span>
+        <span>V</span>
+        <span id="computer-choice">?</span>
+        
+    </div>
+    <button>Let's Battle!</button>
 
     <div class="results-area">
         <p class="results">Battles Won <span id="won">0</span></p>
