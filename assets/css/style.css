@@ -11,7 +11,6 @@ body {
     width: 70%;
     min-width: 300px;
     max-width: 500px;
-   
     border: solid #023B71 10px;
     border-radius: 25px;
     margin-left: auto;
@@ -54,6 +53,7 @@ body {
 
 .battle-ground {
     width: 50%;
+    min-width: 200px;
     font-size: 3rem;
     margin: auto;
     padding: 20px;
