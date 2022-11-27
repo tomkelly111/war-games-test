@@ -9,6 +9,7 @@ body {
     background-color:#414656 ;
     box-sizing: border-box;
     width: 70%;
+    min-width: 300px;
     max-width: 500px;
     max-height: 400PX;
     border: solid #023B71 10px;
