@@ -18,6 +18,39 @@ body {
     padding: 5%;
 }
 
+.user-choices {
+    width: 75%;
+    font-size: 1rem;
+    border: solid #023B71 5px;
+    border-radius: 25px;
+    margin: auto;
+    padding: 10px;
+}
+
+.btn {
+    border-radius: 30%;
+    background-color: #E3F0FF;
+    border: 3px solid;
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+    margin: 15px;
+   
+
+}
+
+.btn:active,
+.btn:hover {
+    background-color: #023B71;
+    color: #E3F0FF;
+}
+
+.btn::after{
+    content: attr(data-type);
+    font-size: 1rem;
+    color: #E3F0FF;
+}
+
 .battle-ground {
     width: 50%;
     font-size: 5rem;
