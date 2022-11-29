@@ -60,6 +60,7 @@ body {
     padding: 20px;
 }
 
-#play-button {
+.play-button {
     display:none;
 }
+

@@ -12,8 +12,6 @@ document.addEventListener("DOMContentLoaded", function() {
             } else if (this.getAttribute("data-type") === "2") {
                 let scissorsElement = document.getElementById("user-choice");
                 scissorsElement.innerHTML = `<i class="fa-solid fa-hand-scissors"></i>`;
-            } else if (this.getAttribute("data-type") === "submit") {
-                runGame();
             } startGame()
         });
     }
@@ -21,18 +19,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function startGame() {
     let playButton = document.getElementById("play-button");
-    playButton.removeAttribute('id');
+    playButton.setAttribute("id", "show-play-button");
+    console.log("Start Game Success")
+}
+function runGame(event) {
+    console.log("game running")
 }
 
+let letsBattle = document.getElementById("show-play-button");
+letsBattle.addEventListener("click", runGame());
 
 
-function runGame() {
-    let computerChoice = document.getElementById("computer-choice");
-    computerChoice.innerHTML = `<i class="fa-regular fa-face-smile"></i>`;
-    endGame();
-}
 
-function endGame() {
-    let playButton = document.getElementsByClassName("play-button");
-    playButton.setAttribute('id', 'play-button');
-}
+
+
+
+
