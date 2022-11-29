@@ -18,16 +18,16 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function startGame() {
-    let playButton = document.getElementById("play-button");
+    playButton = document.getElementById("play-button");
     playButton.setAttribute("id", "show-play-button");
-    console.log("Start Game Success")
+    console.log("Start Game Success");
 }
-function runGame(event) {
+function runGame() {
     console.log("game running")
 }
 
 let letsBattle = document.getElementById("show-play-button");
-letsBattle.addEventListener("click", runGame());
+letsBattle.addEventListener("click", runGame);
 
 
 
