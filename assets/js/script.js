@@ -16,6 +16,8 @@ function gameSelector(weaponType) {
         paperGame();
     } else if (weaponType === "2") {
         scissorsGame();
+    } else if (weaponType === "3") {
+        randomGame();
     } let computerChoice = document.getElementById("computer-choice");
     computerChoice.innerHTML = `<i class="fa-regular fa-circle-question"></i>`;
     let playAgain = document.getElementById("play-again");
@@ -43,6 +45,23 @@ function scissorsGame() {
     let scissorsElement = document.getElementById("user-choice");
     scissorsElement.outerHTML = `<span id="user-choice" data-type="2"><i class="fa-solid fa-hand-scissors"></i></span>`;
     startGame();
+}
+
+function randomGame() {
+    console.log("randomGame success")
+
+    let randomChoice = document.getElementById("user-choice");
+    let userWeapon = Math.floor(Math.random() * 3);
+    if (userWeapon === 0) {
+        rockGame();
+    } else if (userWeapon === 1) {
+        randomChoice.innerHTML = `<i class="fa-solid fa-hand"></i>`;
+        paperGame();
+    } else if (userWeapon === 2) {
+        randomChoice.innerHTML = `<i class="fa-solid fa-hand-scissors"></i>`;
+        scissorsGame();
+    } 
+
 }
 
 
