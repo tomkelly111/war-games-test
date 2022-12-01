@@ -68,3 +68,21 @@ body {
 .results {
     font-size: larger;
 }
+
+@media only screen and (min-width: 768px) {
+    .results-lost {
+        position: fixed;
+        top: 200px;
+        left: 75vw;
+        font-size: xx-large;
+        max-width:200px;
+        margin: 10vw;
+    }
+    .results-won {
+        position: fixed;
+        top: 200px;
+        right: 75vw;
+        font-size: xx-large;
+        max-width: 200px;
+        margin: 10vw;
+    }
