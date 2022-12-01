@@ -79,42 +79,54 @@ function checkWinner(computerWeapon) {
     let userWeapon = document.getElementById("user-choice");
     userSelection = parseInt(userWeapon.getAttribute("data-type"));
     if (userSelection === computerWeapon) {
-        alert("IT'S A DRAW!")
-        endGame();
-    } else if (userSelection < 1 && computerWeapon<2 ) {
-        alert("YOU LOSE");
-        increaseComputerScore();
-    } else if (userSelection < 2 && computerWeapon>1) {
-        alert("YOU Lose!");
-        increaseComputerScore();
-    } else if (userSelection>1 && computerWeapon<1) {
-        alert("you lsoe!");
-        increaseComputerScore();
-    } else {
-        alert("YOU WIN");
-        increaseUserScore();
-    };
-} 
+        draw();
+    } else if (userSelection == 0) {
+        if (computerWeapon == 1) {
+            increaseComputerScore();
+        } else if (computerWeapon == 2) {
+            increaseUserScore();
+        }
+    } else if (userSelection == 1) {
+        if (computerWeapon == 2) {
+            increaseComputerScore();
+        } else if (computerWeapon == 0) {
+            increaseUserScore();
+        }
+    } else if (userSelection == 2) {
+        if (computerWeapon == 0) {
+            increaseComputerScore();
+        } else if (computerWeapon == 1) {
+            increaseUserScore();
+        }
+} }
 
 
 function endGame() {
     let playsButton = document.getElementById("show-play-button");
     playsButton.setAttribute('id', 'play-button');
-    let playAgain = document.getElementById("play-again");
-    playAgain.innerHTML = "Want to play again? Choose your weapon!"
+    
     
 }
 /** taken from love maths */
 function increaseUserScore() {
     let oldScore = parseInt(document.getElementById("won").innerText);
     document.getElementById("won").innerText = ++oldScore;
+    let playAgain = document.getElementById("play-again");
+    playAgain.innerHTML = "YOU WIN! Want to play again? Choose your weapon!"
     endGame();
 
 } 
 function increaseComputerScore() {
     let oldScore = parseInt(document.getElementById("lost").innerText);
     document.getElementById("lost").innerText = ++oldScore;
+    let playAgain = document.getElementById("play-again");
+    playAgain.innerHTML = "YOU LOST! Want to play again? Choose your weapon!"
     endGame();
 
 }
 
+function draw(){
+    let playAgain = document.getElementById("play-again");
+    playAgain.innerHTML = "IT'S A TIE! Want to play again? Choose your weapon!"
+    endGame();
+}
