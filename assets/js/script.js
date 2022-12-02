@@ -11,13 +11,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function gameSelector(weaponType) {
     if (weaponType === "0") {
-        rockGame();
+        let rockElement = document.getElementById("user-choice");
+        rockElement.outerHTML = `<span id="user-choice" data-type="0"><i class="fa-solid fa-hand-fist"></i></span>`;
+        startGame();;
     } else if (weaponType === "1") {
-        paperGame();
+        let paperElement = document.getElementById("user-choice");
+        paperElement.outerHTML = `<span id="user-choice" data-type="1"><i class="fa-solid fa-hand"></i></span>`;
+        startGame();
     } else if (weaponType === "2") {
-        scissorsGame();
+        let scissorsElement = document.getElementById("user-choice");
+        scissorsElement.outerHTML = `<span id="user-choice" data-type="2"><i class="fa-solid fa-hand-scissors"></i></span>`;
+        startGame();
     } else if (weaponType === "3") {
-        randomGame();
+        let randomWeapon = Math.floor(Math.random() * 3);
+        let weaponType = randomWeapon.toString();
+        gameSelector(weaponType);
     } let computerChoice = document.getElementById("computer-choice");
     computerChoice.innerHTML = `<i class="fa-regular fa-circle-question"></i>`;
     let playAgain = document.getElementById("play-again");
@@ -26,43 +34,6 @@ function gameSelector(weaponType) {
 
 
 
-function rockGame() {
-    console.log("rockGame success")
-    let rockElement = document.getElementById("user-choice");
-    rockElement.outerHTML = `<span id="user-choice" data-type="0"><i class="fa-solid fa-hand-fist"></i></span>`;
-    startGame()
-}
-
-function paperGame() {
-    console.log("paperGame success")
-    let paperElement = document.getElementById("user-choice");
-    paperElement.outerHTML = `<span id="user-choice" data-type="1"><i class="fa-solid fa-hand"></i></span>`;
-    startGame();
-}
-
-function scissorsGame() {
-    console.log("scissorsGame success")
-    let scissorsElement = document.getElementById("user-choice");
-    scissorsElement.outerHTML = `<span id="user-choice" data-type="2"><i class="fa-solid fa-hand-scissors"></i></span>`;
-    startGame();
-}
-
-function randomGame() {
-    console.log("randomGame success")
-
-    let randomChoice = document.getElementById("user-choice");
-    let userWeapon = Math.floor(Math.random() * 3);
-    if (userWeapon === 0) {
-        rockGame();
-    } else if (userWeapon === 1) {
-        randomChoice.innerHTML = `<i class="fa-solid fa-hand"></i>`;
-        paperGame();
-    } else if (userWeapon === 2) {
-        randomChoice.innerHTML = `<i class="fa-solid fa-hand-scissors"></i>`;
-        scissorsGame();
-    } 
-
-}
 
 
 function startGame() {
