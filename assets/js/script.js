@@ -43,27 +43,25 @@ function startGame() {
     
     
     let letsBattle = document.getElementById("show-play-button");
-    letsBattle.addEventListener("click", runGame);
+    letsBattle.addEventListener("click", function(){
+        let computerChoice = document.getElementById("computer-choice");
+        let computerWeapon = Math.floor(Math.random() * 3);
+        if (computerWeapon === 0) {
+            computerChoice.innerHTML = `<i class="fa-solid fa-hand-fist"></i>`;
+            checkWinner(computerWeapon);
+        } else if (computerWeapon === 1) {
+        computerChoice.innerHTML = `<i class="fa-solid fa-hand"></i>`;
+        checkWinner(computerWeapon);
+        } else if (computerWeapon === 2) {
+            computerChoice.innerHTML = `<i class="fa-solid fa-hand-scissors"></i>`;
+            checkWinner(computerWeapon);
+        } 
+    });
 
     
 }
 
-function runGame() {
-    let computerChoice = document.getElementById("computer-choice");
-    let computerWeapon = Math.floor(Math.random() * 3);
-    if (computerWeapon === 0) {
-        computerChoice.innerHTML = `<i class="fa-solid fa-hand-fist"></i>`;
-        checkWinner(computerWeapon);
-    } else if (computerWeapon === 1) {
-    computerChoice.innerHTML = `<i class="fa-solid fa-hand"></i>`;
-    checkWinner(computerWeapon);
-    } else if (computerWeapon === 2) {
-        computerChoice.innerHTML = `<i class="fa-solid fa-hand-scissors"></i>`;
-        checkWinner(computerWeapon);
-    } 
-    
-    
-}
+
 
 function checkWinner(computerWeapon) {
     let userWeapon = document.getElementById("user-choice");
