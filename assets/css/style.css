@@ -52,6 +52,27 @@ body {
     color: #E3F0FF;
 }
 
+#you-id {
+    float:left;
+    position:relative;
+    left: 30px;
+    width: 100px;
+    margin: 20px;
+    
+    border: solid #E3F0FF 3px;
+}
+
+#comp-id {
+    float:left;
+    position:relative;
+    left: 30px;
+    width: 100px;
+    margin: 20px;
+    ;
+    
+    border: solid #E3F0FF 3px;
+}
+
 .battle-ground {
     width: 50%;
     min-width: 200px;
@@ -86,3 +107,4 @@ body {
         max-width: 200px;
         margin: 10vw;
     }
+}
