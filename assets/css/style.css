@@ -52,6 +52,12 @@ body {
     color: #E3F0FF;
 }
 
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    }
+    
 #you-id {
     float:left;
     position:relative;
